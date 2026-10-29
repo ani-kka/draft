@@ -1,0 +1,100 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #002147;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px auto;
+    width: 300px;
+    padding: 16px;
+    background-color: #002147;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 1em 0;
+}
+
+
+img {
+    border: 0.2em solid #5b3256;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+button {
+    background-color: #a275a5;
+    color: #5b3256;
+    margin: 1em;
+    padding: 0.8em;
+    border: 0.2em solid #5b3256;
+    border-radius: 1em;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    div {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    #giftBtn {
+        width: 80%;
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

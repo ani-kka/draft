@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>^3^</title>
+        <link rel="stylesheet" href="all style.css">
+    </head>
+    <body style="background-image: url(YN.png); background-repeat: no-repeat; background-size: 1500px 820px;">
+
+
+<div class="login-box" style="background-color: #bcd4e6; height: 330px; width: 300px; border:3px solid #003153;">
+    
+    <h2>WELCOME</h2>
+
+    <label for="username" style="color: #003153;">Username:</label><br>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password" style="color: #003153;">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+
+    <button class="action-btn" onclick="login()">Login</button>
+
+    <p id="error"></p>
+</div>
+
+<script>
+    function login() {
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+        
+    console.log(username);
+    console.log(password);
+
+    const correctUser = "tino";
+    const correctPass = "1102";
+
+    if (username === correctUser && password === correctPass) {
+            window.location.href = "loading.html";
+    } else {
+        document.getElementById("error").textContent =
+            "Incorrect input! Try again.";
+    }
+}
+</script>
+
+    </body>
+</html>

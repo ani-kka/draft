@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>^3^</title>
+    <link rel="stylesheet" href="cake.css">
+</head>
+
+    <body style="background-image: url(lave.png); background-repeat: no-repeat; background-size: 1500px 820px; background-attachment: fixed;">
+
+        <header>
+         ⊹₊˚‧︵‿₊୨ 애기♡ ୧₊‿︵‧˚₊⊹
+        <nav>
+        <a href="gift.html">Gift</a> |
+        <a href="homepage.html">Home</a>
+        </nav>
+        </header>
+
+
+
+<div class="container">
+
+    <h1 id="title">Make a wish after the song!</h1>
+
+    <div class="cake" onclick="blowAllCandles()">
+
+        <div class="candles">
+
+            <div class="candle">
+                <div class="flame"></div>
+                <div class="smoke"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+                <div class="smoke"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+                <div class="smoke"></div>
+            </div>
+
+        </div>
+
+        <div class="layer top"></div>
+        <div class="layer middle"></div>
+        <div class="layer bottom"></div>
+
+    </div>
+
+    <p class="note">Click to blow the candles!</p>
+
+</div>
+
+        <audio id="birthdaySong" autoplay>
+        <source src="hbd song kor ver (mp3cut.net).mp3" type="audio/mpeg">
+
+<script>
+
+let blown = false;
+
+function blowAllCandles(){
+
+    if(blown) return;
+
+    blown = true;
+
+    const flames = document.querySelectorAll(".flame");
+    const smokes = document.querySelectorAll(".smoke");
+
+    flames.forEach((flame,index)=>{
+
+        setTimeout(()=>{
+
+            flame.style.opacity="0";
+
+            smokes[index].classList.add("show");
+
+        },index*150);
+
+    });
+
+    setTimeout(()=>{
+
+        document.getElementById("title").innerHTML =
+        "YAY! <br> hbd again bebe ^3^!";
+        
+
+        launchConfetti();
+
+    },700);
+
+}
+
+function launchConfetti(){
+
+    const colors = [
+        "#ff4d6d",
+        "#ffd60a",
+        "#4cc9f0",
+        "#80ed99",
+        "#9b5de5"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const confetti =
+        document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        confetti.style.left =
+        Math.random()*100 + "vw";
+
+        confetti.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+        confetti.style.animationDuration =
+        (Math.random()*3 + 2) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(()=>{
+            confetti.remove();
+        },5000);
+
+    }
+}
+
+</script>
+
+</body>
+</html>
